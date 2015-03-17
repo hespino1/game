@@ -1,0 +1,13 @@
+<h1>Players List</h1>
+
+<ul>
+	<% @players.each do |player| %>
+		<li><%= player.name %></li>
+		<p><%= player.email %></p>
+		<p><%= player.username %></p>
+		<p><%= player.points %></p>
+		<p><%= player.active %>
+		<p><%= link_to 'Edit', edit_player_path(player) %> 
+		<%= link_to "Delete", player_path(player), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	<% end %>
+</ul>

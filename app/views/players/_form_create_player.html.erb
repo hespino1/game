@@ -1,0 +1,26 @@
+<%= form_for @player do |player| %>
+  <p>
+    <%= player.label :player_email %><br>
+    <%= player.text_field :email %>
+  </p>
+  <p>
+    <%= player.label :player_name %><br>
+    <%= player.text_field :name %>
+  </p>
+  <p>
+    <%= player.label :player_username %><br>
+    <%= player.text_field :username %>
+  </p>
+  <p>
+    <%= player.label :player_points %><br>
+    <%= player.number_field :points %>
+  </p>
+  <p>
+    <%= player.label :player_active_? %><br>
+    <%= player.check_box :active %>
+  </p>
+ 
+  <p>
+    <%= player.submit %>
+  </p>
+<% end %>
